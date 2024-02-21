@@ -6,7 +6,9 @@ export default {
   ],
   theme: {
     extend: {
-      
+      colors :{
+        'mtwhite': '#000000'
+      }
     },
   },
   plugins: [],

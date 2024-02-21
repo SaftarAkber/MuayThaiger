@@ -4,6 +4,9 @@ import Nft from './components/Nft'
 import Faq from './components/Faq'
 import Roadmap from './components/Roadmap'
 import Team from './components/Team'
+import NewsLetter from './components/Newsletter'
+import Footer from './components/Footer'
+import Game from './components/Game'
 function App() {
 
   return (
@@ -13,6 +16,9 @@ function App() {
       <Faq/>
       <Roadmap/>
       <Team/>
+      <NewsLetter/>
+      <Footer/>
+      <Game/>
     </>
   )
 }

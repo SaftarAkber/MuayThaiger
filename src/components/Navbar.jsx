@@ -1,5 +1,5 @@
 import Logo from '../assets/mortallogo.jpg'
-
+import { Link } from 'react-scroll'
 function Navbar() {
     return (
         <div>
@@ -10,13 +10,62 @@ function Navbar() {
                     </div>
                     <div>
                         <ul className="flex-row flex gap-4">
-                            <li className='hover:text-orange-500 cursor-pointer'>Menu</li>
-                            <li className='hover:text-orange-500 cursor-pointer'>NFT</li>
-                            <li className='hover:text-orange-500 cursor-pointer'>About us</li>
-                            <li className='hover:text-orange-500 cursor-pointer'>Game</li>
-                            <li className='hover:text-orange-500 cursor-pointer'>Partners</li>
-                            <li className='hover:text-orange-500 cursor-pointer'>Info</li>
-                            <li className='hover:text-orange-500 cursor-pointer'>roadmap</li>
+                            <li className='hover:text-orange-500 hover:duration-300 cursor-pointer'><Link
+                                activeClass="active"
+                                to="game"
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >Game</Link></li>
+                            <li className='hover:text-orange-500 hover:duration-300 cursor-pointer'><Link
+                                activeClass="active"
+                                to="aboutus"
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >About us</Link></li>
+                            <li className='hover:text-orange-500 hover:duration-300 cursor-pointer'><Link
+                                activeClass="active"
+                                to="nft"
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >Nft</Link></li>
+                            <li className='hover:text-orange-500 hover:duration-300 cursor-pointer'><Link
+                                activeClass="active"
+                                to="faq"
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >Faq</Link></li>
+                            <li className='hover:text-orange-500 hover:duration-300 cursor-pointer'><Link
+                                activeClass="active"
+                                to="team"
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >Team</Link></li>
+                            <li className='hover:text-orange-500 hover:duration-300 cursor-pointer'><Link
+                                activeClass="active"
+                                to="roadmap"
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >Roadmap</Link></li>
+                            <li className='hover:text-orange-500 hover:duration-300 cursor-pointer'><Link
+                                activeClass="active"
+                                to="partners"
+                                spy={true}
+                                smooth={true}
+                                offset={50}
+                                duration={500}
+                            >Partners</Link></li>
                         </ul>
                     </div>
                     <div>
@@ -55,8 +104,8 @@ function Navbar() {
                                         viewBox="0 0 24 24"
                                         xmlns="http://www.w3.org/2000/svg"
                                     >
-                                    <path d="M8 13V9m-2 2h4m5-2v.001M18 12v.001m4-.334v5.243a3.09 3.09 0 0 1-5.854 1.382L16 18a3.618 3.618 0 0 0-3.236-2h-1.528c-1.37 0-2.623.774-3.236 2l-.146.292A3.09 3.09 0 0 1 2 16.91v-5.243A6.667 6.667 0 0 1 8.667 5h6.666A6.667 6.667 0 0 1 22 11.667Z">
-                                    </path></svg>Play Demo</span>
+                                        <path d="M8 13V9m-2 2h4m5-2v.001M18 12v.001m4-.334v5.243a3.09 3.09 0 0 1-5.854 1.382L16 18a3.618 3.618 0 0 0-3.236-2h-1.528c-1.37 0-2.623.774-3.236 2l-.146.292A3.09 3.09 0 0 1 2 16.91v-5.243A6.667 6.667 0 0 1 8.667 5h6.666A6.667 6.667 0 0 1 22 11.667Z">
+                                        </path></svg>Play Demo</span>
                             </button>
                         </div>
                     </div>

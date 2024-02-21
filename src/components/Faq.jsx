@@ -31,7 +31,7 @@ const faqData = [
     }
 ];
 
-export default function FAQ(){
+export default function FAQ() {
     const [expandedIndex, setExpandedIndex] = useState(-1);
 
     const toggleExpanded = (index) => {
@@ -43,32 +43,34 @@ export default function FAQ(){
     };
 
     return (
-        <div className="text-white bg-center p-24 w-full bg-cover w-full bg-cover h-[100%] bg-[url('/src/17.jpg')]">
-            <ul className=" max-w-screen-sm list-none list-disc mx-auto pb-20 pt-5 font-mono space-y-2">
-                {faqData.map((faq, index) => (
-                    <li key={index} className="hover:bg-[#075b0787] bg-[#00000063] font-bold font-sans border-2 p-4 mb-4">
-                        <button
-                            className="flex items-center justify-between w-full text-left focus:outline-none"
-                            onClick={() => toggleExpanded(index)}
-                        >
-                            <span className="text-3xl font-medium font-sans text-white hover:text-white">{faq.question}</span>
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className={`h-6 w-6 transform ${expandedIndex === index ? 'rotate-180' : 'rotate-0'}`}
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
+        <div id='faq' className="bg-cover h-[130vh] bg-[url('/src/bgfaq.png')]">
+            <h3 className="text-7xl text-orange-600  font-[outfit] font-bold  text-center">FAQ</h3>
+            <div className="text-white bg-center  w-full bg-cover w-full">
+                <ul className=" max-w-screen-sm list-none list-disc mx-auto pb-20 pt-5 font-mono space-y-2">
+                    {faqData.map((faq, index) => (
+                        <li key={index} className="hover:bg-[#075b0787] bg-[#00000063] font-bold font-sans border-2 p-4 mb-4">
+                            <button
+                                className="flex items-center justify-between w-full text-left focus:outline-none"
+                                onClick={() => toggleExpanded(index)}
                             >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                            </svg>
-                        </button>
-                        {expandedIndex === index && (
-                            <p className="mt-2 text-white">{faq.answer}</p>
-                        )}
-                    </li>
-                ))}
-            </ul>
-        </div>
+                                <span className="text-3xl font-medium font-sans text-white hover:text-white">{faq.question}</span>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    className={`h-6 w-6 transform ${expandedIndex === index ? 'rotate-180' : 'rotate-0'}`}
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                                </svg>
+                            </button>
+                            {expandedIndex === index && (
+                                <p className="mt-2 text-white">{faq.answer}</p>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </div >
     );
-} 
- 
+}
